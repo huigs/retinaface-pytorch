@@ -23,4 +23,8 @@ while True:
         r_image = retinaface.detect_image(image)
         r_image = cv2.cvtColor(r_image,cv2.COLOR_RGB2BGR)
         cv2.imshow("after",r_image)
-        cv2.waitKey(0)
+        #cv2.waitKey(0)
+        c= cv2.waitKey(0) & 0xff 
+        if c==ord('q'):
+            #cv2.release()            
+            break
